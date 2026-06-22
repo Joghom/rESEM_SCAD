@@ -79,7 +79,7 @@ find_lambda_max_SCAD <- function(DATA,
                                  eps       = 1e-5,
                                  nstarts   = 3,
                                  min_items = 3,
-                                 grid_size = 60,
+                                 grid_size = 40,
                                  verbose   = TRUE)
 {
   # ----------------------------------------------------------
@@ -87,7 +87,7 @@ find_lambda_max_SCAD <- function(DATA,
   # ----------------------------------------------------------
   
   lam_max <- lambda_upper_empirical_SCAD(DATA)
-  lam_max <- 100
+  
   # logarithmic continuation path
   lambda_grid <- exp(seq(log(1e-4),
                          log(lam_max),
